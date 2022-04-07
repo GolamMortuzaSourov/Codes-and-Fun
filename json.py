@@ -1,3 +1,4 @@
+//This is a program that I made while practicing extracting json data with python
 import json
 data = '''
 {
