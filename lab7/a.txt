@@ -1,0 +1,9 @@
+Customer Name	|	Ivan Danko
+Account Number	|	234343129842
+Report Date	|	02/25/2023
+Stock Name	|	ATVI
+Shares Held	|	742
+Opening Price	|	80.21
+High Price	|	80.28
+Low Price	|	78.78
+Closing Price	|	78.99

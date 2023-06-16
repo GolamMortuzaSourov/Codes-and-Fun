@@ -1,0 +1,5 @@
+Customer: Ivan Danko
+Reporting Date: 02/25/2023
+Reporting Date: 02/25/2023
+Stock     Open Price     Closing Price  Loss
+ATVI      80.21          78.99          905.24
