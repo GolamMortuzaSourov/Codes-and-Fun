@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(int argc,char * argv[]){
+	const char *filename;
+	const char *filename1;
+	FILE *ptr;
+	FILE *p;
+	char line[100];
+	int height=0;
+	int width=0;
+	int c=0;
+	filename= argv[1];
+	filename1= argv[2];
+
+	if(argc <=2){
+		printf("%s\n","Error - two input files were not provided as command line arguments");
+	}else if((strcmp(filename,"labyrinth.txt"))!=0){
+		printf("%s %s %s\n","Error - the ",filename," file could not be opened");
+	}else if((strcmp(filename1,"directions.txt"))!=0){
+		printf("%s %s %s\n","Error - the ",filename1," file could not be opened");
+	}else{
+		ptr = fopen(argv[1],"r");
+		while(fgets(line,sizeof(line),ptr)!= NULL){
+			if(height == 0){
+				while(c<sizeof(line)){
+					if(line[c]=='|'){
+						//printf("%c\n",line[c]);
+						width++;
+						c++;
+					}
+					else{
+						break;
+					}
+				}
+			}
+			height++;
+		}
+		char maze[height][width];
+		char c;
+		int h=0;
+		int w=0;
+		FILE *p = fopen(argv[1],"r");
+		while(fgets(line,sizeof(line),p)!= NULL){
+			while(w<width){
+				maze[h][w]=line[w];
+				w++;
+			}
+			w=0;
+			h++;
+		}
+		/*for(int y=0;y<height;y++){
+			for(int o=0;o<width;o++){
+				printf("%c",maze[y][o] );
+			}
+		}*/
+	}
+	return 0;
+}
